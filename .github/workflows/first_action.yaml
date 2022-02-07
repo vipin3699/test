@@ -1,0 +1,11 @@
+name: first-actions
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  run-the-deployment-sh-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: sh test_action.sh

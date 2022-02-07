@@ -1,0 +1,1 @@
+echo "This is a file use by GitHub actions to test the deployment. version 01"
