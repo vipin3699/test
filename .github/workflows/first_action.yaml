@@ -4,12 +4,12 @@ on:
     branches:
       - 'master'
 jobs:
-  run-the-first_action-sh-file:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: sh test_action.sh
-  # run-the-commands-without-any-dependency:
+  # run-the-first_action-sh-file:
   #   runs-on: ubuntu-latest
   #   steps:
-  #     run: echo This is a command that is independent of any file in the repo so don't need action checkout plugin.
+  #     - uses: actions/checkout@v2
+  #     - run: sh test_action.sh
+  run-the-commands-without-any-dependency:
+    runs-on: ubuntu-latest
+    steps:
+      run: echo This is a command that is independent of any file in the repo so don't need action checkout plugin.
