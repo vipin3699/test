@@ -7,4 +7,4 @@ jobs:
   run-the-deployment-sh-file:
     runs-on: ubuntu-latest
     steps:
-      - run: sh test_action.sh
+      - run: echo this is a test common without repo checkout.
