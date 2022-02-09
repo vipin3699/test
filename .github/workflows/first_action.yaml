@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: sh test_action.sh
   run-the-commands-without-any-dependency:
+    id: test_action
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is a command that is independent of any file in the repo so don't need action checkout plugin."
