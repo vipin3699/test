@@ -6,13 +6,14 @@ on:
   workflow_dispatch:
 jobs:
   run-the-first_action-sh-file:
+    name: step dependent on the repo
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: sh test_action.sh
   run-the-commands-without-any-dependency:
-    id: test_action
+    name: independent step
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is a command that is independent of any file in the repo so don't need action checkout plugin."
-      - run: ls;pwd
+        - run: echo "This is a command that is independent of any file in the repo so don't need action checkout plugin."
+        - run: ls;pwd
